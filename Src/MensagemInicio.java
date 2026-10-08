@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class mensagemInicio {
+public class MensagemInicio {
 
 
 
@@ -21,23 +21,24 @@ public class mensagemInicio {
         System.out.print("Cálculo escolhido: ");
 
         int numeroDigitado = scanner.nextInt();
-        mensagemInicio.validarEntrada(numeroDigitado); 
+        numeroDigitado = MensagemInicio.validarEntrada(numeroDigitado); 
 
         return numeroDigitado;
         
     }
 
-    public static void validarEntrada(int numeroDigitado){
+    public static int validarEntrada(int numeroDigitado){
+        int numeroDigitadoErro = numeroDigitado;
         Scanner scanner = new Scanner(System.in);
-            while (numeroDigitado != 1 && numeroDigitado != 2 && numeroDigitado != 3 && numeroDigitado != 4) {
+            while (numeroDigitadoErro != 1 && numeroDigitadoErro != 2 && numeroDigitadoErro != 3 && numeroDigitadoErro != 4) {
                 System.out.println("\nCálculo não existente! Tente novamente.");
                 System.out.println("Deseja fazer qual cálculo? (Coloque somente o número)");
                 System.out.println("1- Adição \n2- Subtração \n3- Multiplicação \n4- Divisão");
                 System.out.println();
                 System.out.print("Cálculo escolhido: ");
-                numeroDigitado = scanner.nextInt();
+                numeroDigitadoErro = scanner.nextInt();
             }
-        } return numeroDigitado;
-
-    }
+        return numeroDigitadoErro;
+    } 
+}
             

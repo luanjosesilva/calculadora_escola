@@ -1,14 +1,11 @@
-import java.util.Scanner;
-
 public class Calculadora {  
-
   public static void main (String[] args) {
 
-    int numeroDigitado;
+    int numeroEscolhido;
 
-    numeroDigitado = mensagemInicio.mostrarMensagem();
+    numeroEscolhido = MensagemInicio.mostrarMensagem();
 
-    System.out.println("Número final escolhido: " + numeroDigitado);
+    System.out.println("Número final escolhido: " + numeroEscolhido);
   }
 
 }
