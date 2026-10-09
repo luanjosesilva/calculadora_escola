@@ -7,7 +7,7 @@ public class Calculadora {
 
     String nomeCalculo = null;
 
-    numeroEscolhido = MensagemInicio.mostrarMensagem();
+    numeroEscolhido = Mensagens.mensagemInicio();
 
     switch(numeroEscolhido) {
 
