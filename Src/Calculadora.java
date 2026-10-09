@@ -18,14 +18,17 @@ public class Calculadora {
 
             case 2:
             nomeCalculo = "Subtração";
+            Calculos.subtracao();
             break;
 
             case 3:
             nomeCalculo = "Multiplicação";
+            Calculos.multiplicacao();
             break;
 
             case 4:
             nomeCalculo = "Divisão";
+            Calculos.divisao();
             break;
         }
 
