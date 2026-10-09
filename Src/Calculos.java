@@ -7,7 +7,9 @@ public class Calculos {
     public static void adicao() {
         
         Scanner scanner = new Scanner(System.in);
-        
+
+        Mensagens.limparTerminal();
+
         System.out.println("\n\nVocê escolheu o cálculo de Adição!");
         System.out.println("Quais são os números escolhidos?\n");
         
@@ -20,6 +22,7 @@ public class Calculos {
         double resultado = primeiroNumero + segundoNumero;
         System.out.println("O resultado dessa soma é: " + resultado);
 
+        Mensagens.desejaContinuar();
     }
 
 }
