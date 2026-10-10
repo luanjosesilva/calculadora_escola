@@ -87,8 +87,9 @@ public class Mensagens {
         
         System.out.print("Digite a senha: ");
         String senhaDigitada = scanner.nextLine();
+        String senhaCriptografada = SistemaLogin.gerarHash(senhaDigitada);
 
-        SistemaLogin.cadastrarUsuario(usuarioDigitado, senhaDigitada);
+        SistemaLogin.cadastrarUsuario(usuarioDigitado, senhaCriptografada);
 
     }
 

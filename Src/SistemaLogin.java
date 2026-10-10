@@ -49,5 +49,24 @@ public class SistemaLogin {
 
     }
 
+    public static String gerarHash(String senha) {
+        try {
+            // Pula a parte complexa e usa o gerador nativo do Java
+            java.security.MessageDigest digest = java.security.MessageDigest.getInstance("SHA-256");
+            byte[] hash = digest.digest(senha.getBytes("UTF-8"));
+
+            // Converte os bytes gerados para um texto legível (hexadecimal)
+            StringBuilder hexString = new StringBuilder();
+            for (byte b : hash) {
+                String hex = Integer.toHexString(0xff & b);
+                if (hex.length() == 1) hexString.append('0');
+                hexString.append(hex);
+            }
+            return hexString.toString();
+            
+        } catch (Exception e) {
+            throw new RuntimeException("Erro ao gerar o hash da senha", e);
+        }
+    }
 
 }

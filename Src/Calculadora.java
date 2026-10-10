@@ -3,37 +3,39 @@ package Src;
 public class Calculadora {  
   public static void main (String[] args) {
 
-    int numeroEscolhido;
+    Mensagens.fazerCadastro();
 
-    // String nomeCalculo = null;
+    // int numeroEscolhido;
 
-    numeroEscolhido = Mensagens.mensagemInicio();
+    // // String nomeCalculo = null;
 
-    switch(numeroEscolhido) {
+    // numeroEscolhido = Mensagens.mensagemInicio();
 
-            case 1:
-            // nomeCalculo = "Adição";
-            Calculos.adicao();
-            break;
+    // switch(numeroEscolhido) {
 
-            case 2:
-            // nomeCalculo = "Subtração";
-            Calculos.subtracao();
-            break;
+    //         case 1:
+    //         // nomeCalculo = "Adição";
+    //         Calculos.adicao();
+    //         break;
 
-            case 3:
-            // nomeCalculo = "Multiplicação";
-            Calculos.multiplicacao();
-            break;
+    //         case 2:
+    //         // nomeCalculo = "Subtração";
+    //         Calculos.subtracao();
+    //         break;
 
-            case 4:
-            // nomeCalculo = "Divisão";
-            Calculos.divisao();
-            break;
-        }
+    //         case 3:
+    //         // nomeCalculo = "Multiplicação";
+    //         Calculos.multiplicacao();
+    //         break;
+
+    //         case 4:
+    //         // nomeCalculo = "Divisão";
+    //         Calculos.divisao();
+    //         break;
+    //     }
 
 
-    // System.out.println("Cálculo final escolhido: " + numeroEscolhido + " - " + nomeCalculo);
+    // // System.out.println("Cálculo final escolhido: " + numeroEscolhido + " - " + nomeCalculo);
   }
 
 }
