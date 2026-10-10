@@ -8,7 +8,7 @@ public class SistemaLogin {
     
     private static final String URL = "jdbc:mysql://localhost:3306/sistema_login";
     private static final String USUARIO = "root";
-    private static final String SENHA = "Luan8530";
+    private static final String SENHA = "";
 
 
     public static java.sql.Connection conectar() {

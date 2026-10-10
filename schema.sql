@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS sistema_login;
+
+USE sistema_login;
+
+CREATE TABLE IF NOT EXISTS usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    usuario VARCHAR(50) NOT NULL UNIQUE,
+    senha VARCHAR(64) NOT NULL
+);
+
+SELECT * FROM usuarios
