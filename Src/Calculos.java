@@ -2,6 +2,8 @@ package Src;
 
 import java.util.Scanner;
 
+@SuppressWarnings("resource")
+
 public class Calculos {
     
     public static void adicao() {
@@ -20,9 +22,15 @@ public class Calculos {
         double segundoNumero = scanner.nextDouble();
         
         double resultado = primeiroNumero + segundoNumero;
-        System.out.println("O resultado dessa soma é: \u001B[32m" + resultado + "\u001B[0m");
+
+        if (resultado == (int) resultado) {
+            System.out.println("O resultado dessa soma é: \u001B[32m" + (int) resultado + "\u001B[0m");
+        } else {
+            System.out.println("O resultado dessa soma é: \u001B[32m" + resultado + "\u001B[0m");
+        }
 
         Mensagens.desejaContinuar();
+
     }
 
     public static void subtracao() {
@@ -85,7 +93,7 @@ public class Calculos {
         double segundoNumero = scanner.nextDouble();
         
         double resultado = primeiroNumero / segundoNumero;
-        System.out.println("O resultado dessa subtração é: \u001B[32m" + resultado + "\u001B[0m");
+        System.out.println("O resultado dessa divisão é: \u001B[32m" + resultado + "\u001B[0m");
 
         Mensagens.desejaContinuar();
 

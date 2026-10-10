@@ -5,29 +5,29 @@ public class Calculadora {
 
     int numeroEscolhido;
 
-    String nomeCalculo = null;
+    // String nomeCalculo = null;
 
     numeroEscolhido = Mensagens.mensagemInicio();
 
     switch(numeroEscolhido) {
 
             case 1:
-            nomeCalculo = "Adição";
+            // nomeCalculo = "Adição";
             Calculos.adicao();
             break;
 
             case 2:
-            nomeCalculo = "Subtração";
+            // nomeCalculo = "Subtração";
             Calculos.subtracao();
             break;
 
             case 3:
-            nomeCalculo = "Multiplicação";
+            // nomeCalculo = "Multiplicação";
             Calculos.multiplicacao();
             break;
 
             case 4:
-            nomeCalculo = "Divisão";
+            // nomeCalculo = "Divisão";
             Calculos.divisao();
             break;
         }

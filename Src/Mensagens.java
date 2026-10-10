@@ -7,8 +7,10 @@ public class Mensagens {
 
 
     public static int mensagemInicio() {
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("\n----Bem vindo a \u001B[36mCalculadora\u001B[0m----");
+        
         try {
           Thread.sleep(1000);
         } catch (InterruptedException e) {
@@ -37,7 +39,7 @@ public class Mensagens {
         
         
         return numeroDigitado;
-        
+
     }
 
     public static void desejaContinuar() {
@@ -49,11 +51,13 @@ public class Mensagens {
 
         switch (continuar) {
             case 1:
+                limparTerminal();
                 Mensagens.mensagemInicio();
                 break;
         
             case 2:
-                System.out.println("\nEncerrando...");
+                limparTerminal();
+                System.out.println("\n\n\u001B[31mEncerrando...\u001B[0m");
                 System.exit(0);
                 break;
         }
@@ -64,6 +68,12 @@ public class Mensagens {
 
         System.out.println("\033[2J\033[H");
         System.out.flush();
+
+    }
+
+    public static void verificacaoNumero() {
+
+        // para verificar se a pessoa está inserindo um número ou outra coisa, para não dar erro no terminal
 
     }
 
