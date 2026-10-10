@@ -3,7 +3,7 @@ package Src;
 public class Calculadora {  
   public static void main (String[] args) {
 
-    Mensagens.fazerCadastro();
+    Mensagens.fazerLogin();
 
     // int numeroEscolhido;
 

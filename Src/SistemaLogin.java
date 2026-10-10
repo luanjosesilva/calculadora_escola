@@ -2,13 +2,15 @@ package Src;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Scanner;
 
 public class SistemaLogin {
     
     private static final String URL = "jdbc:mysql://localhost:3306/sistema_login";
     private static final String USUARIO = "root";
-    private static final String SENHA = "";
+    private static final String SENHA = "Luan8530";
 
 
     public static java.sql.Connection conectar() {
@@ -40,6 +42,8 @@ public class SistemaLogin {
 
             stmt.executeUpdate();
             System.out.println("Usuário cadastrado com sucesso");
+
+            Mensagens.fazerLogin();
             
         } catch (SQLException e) {
 
@@ -49,13 +53,41 @@ public class SistemaLogin {
 
     }
 
+    public static void loginUsuario(String usuario, String senha) {
+
+        String sql = "SELECT * FROM usuarios WHERE usuario = ? AND senha = ?";
+
+        try (Connection conexao = conectar();
+             PreparedStatement stmt = conexao.prepareStatement(sql)) {
+
+            stmt.setString(1, usuario);
+            stmt.setString(2, senha);
+
+            try (ResultSet rs = stmt.executeQuery()) {
+
+                if (rs.next()) {
+                    System.out.println("Login efetuado com sucesso!");
+                } else {
+                    System.out.println("Usuário ou senha incorretos.");
+                }
+
+            }
+            
+        } catch (SQLException e) {
+
+            System.out.println("Erro ao fazer login: " + e.getMessage());
+
+        }
+
+    }
+
     public static String gerarHash(String senha) {
         try {
-            // Pula a parte complexa e usa o gerador nativo do Java
+            
             java.security.MessageDigest digest = java.security.MessageDigest.getInstance("SHA-256");
             byte[] hash = digest.digest(senha.getBytes("UTF-8"));
 
-            // Converte os bytes gerados para um texto legível (hexadecimal)
+            
             StringBuilder hexString = new StringBuilder();
             for (byte b : hash) {
                 String hex = Integer.toHexString(0xff & b);
