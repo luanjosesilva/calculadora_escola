@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Mensagens {
 
 
-
     public static int mensagemInicio() {
 
         Scanner scanner = new Scanner(System.in);
@@ -54,7 +53,7 @@ public class Mensagens {
                 limparTerminal();
                 Mensagens.mensagemInicio();
                 break;
-        
+
             case 2:
                 limparTerminal();
                 System.out.println("\n\n\u001B[31mEncerrando...\u001B[0m");
@@ -77,36 +76,5 @@ public class Mensagens {
 
     }
 
-    public static void fazerCadastro() {
-
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("=== SISTEMA DE LOGIN - CADASTRO ===");
-        System.out.print("Digite o nome de usuário: ");
-        String usuarioDigitado = scanner.nextLine();
-        
-        System.out.print("Digite a senha: ");
-        String senhaDigitada = scanner.nextLine();
-        String senhaCriptografada = SistemaLogin.gerarHash(senhaDigitada);
-
-        SistemaLogin.cadastrarUsuario(usuarioDigitado, senhaCriptografada);
-
-    }
-
-    public static void fazerLogin() {
-
-    Scanner scanner = new Scanner(System.in);
-
-        System.out.println("=== SISTEMA DE LOGIN - ENTRAR ===");
-        System.out.print("Digite o nome de usuário: ");
-        String usuarioDigitado = scanner.nextLine();
-        
-        System.out.print("Digite a senha: ");
-        String senhaDigitada = scanner.nextLine();
-        String senhaCriptografada = SistemaLogin.gerarHash(senhaDigitada);
-
-        SistemaLogin.loginUsuario(usuarioDigitado, senhaCriptografada);
-
-    }
 }
             
