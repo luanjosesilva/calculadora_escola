@@ -77,6 +77,21 @@ public class Mensagens {
 
     }
 
+    public static void fazerCadastro() {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("=== SISTEMA DE LOGIN - CADASTRO ===");
+        System.out.print("Digite o nome de usuário: ");
+        String usuarioDigitado = scanner.nextLine();
+        
+        System.out.print("Digite a senha: ");
+        String senhaDigitada = scanner.nextLine();
+
+        SistemaLogin.cadastrarUsuario(usuarioDigitado, senhaDigitada);
+
+    }
+
 
 }
             
